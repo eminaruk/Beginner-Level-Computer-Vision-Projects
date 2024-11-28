@@ -41,7 +41,7 @@ def resim_sec():
 
     
     # kullanıcıdan bir resim seçmesini istiyoruz
-    resim_yolu = filedialog.askopenfilename(filetypes=[("Image Files", "*.jpg, *.png *.jpeg")]) # burada kabul edilen uzantılarımızı belirliyoruz
+    resim_yolu = filedialog.askopenfilename(filetypes=[("Image Files", "*.jpg;*.png;*.jpeg")]) # burada kabul edilen uzantılarımızı belirliyoruz
     
     if resim_yolu:
 
@@ -136,6 +136,7 @@ def kenar_tespit_et():
 # pencere oluşturuyoruz
 app = customtkinter.CTk()
 app.geometry("900x650")  # pencere boyutunu genişlik-yükseklik olarak ayarlıyoruz
+app.title("Canny Algoritması ile Kenar Tespiti") # uygulama başlığını ayarlıyoruz
 
 # resim seçme butonunu oluşturuyoruz ve sabit bir konuma yerleştiriyoruz
 resim_secme_butonu = customtkinter.CTkButton(app, text="Resim Seç", command=resim_sec)
